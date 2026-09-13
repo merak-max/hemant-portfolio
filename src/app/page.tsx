@@ -1,103 +1,132 @@
-import Image from "next/image";
+const projects = [
+  {
+    title: "Advance Online Chatbot",
+    label: "Flagship AI workspace",
+    description: "Streaming chat, controlled model selection, document Q&A, versioned backups, defensive validation, and 52 automated checks.",
+    stack: ["React", "Express", "OpenAI SDK", "Playwright"],
+    repo: "https://github.com/merak-max/advance-online-chatbot",
+    demo: "https://merak-max.github.io/advance-online-chatbot/",
+  },
+  {
+    title: "Blue Carbon Registry",
+    label: "Full-stack workflow prototype",
+    description: "A TypeScript interface and Express API for project records, verification states, credit accounting, and stakeholder dashboards.",
+    stack: ["TypeScript", "React", "Express", "MongoDB"],
+    repo: "https://github.com/merak-max/blue-carbon-registry",
+    demo: "https://merak-max.github.io/blue-carbon-registry/",
+  },
+  {
+    title: "Mini AlgoChat",
+    label: "AI integration foundation",
+    description: "A focused chatbot that demonstrates secure server-side provider access, local conversation history, responsive design, and CI.",
+    stack: ["React", "Vite", "Node.js", "GitHub Actions"],
+    repo: "https://github.com/merak-max/mini-algochat",
+    demo: "https://merak-max.github.io/mini-algochat/",
+  },
+];
+
+const skills = [
+  ["Frontend", "React, TypeScript, JavaScript, HTML, CSS, Vite, Next.js"],
+  ["Backend", "Node.js, Express, REST APIs, validation, authentication"],
+  ["Data", "MongoDB, Mongoose, browser storage, JSON workflows"],
+  ["AI", "OpenAI-compatible APIs, streaming, context and input safeguards"],
+  ["Quality", "Playwright, Node.js tests, ESLint, GitHub Actions"],
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      <nav className="nav shell" aria-label="Primary navigation">
+        <a className="wordmark" href="#top">HKS<span>.</span></a>
+        <div className="navLinks">
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a href="https://github.com/merak-max" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </nav>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+      <section id="top" className="hero shell">
+        <p className="eyebrow">Hemant Kumar Singh · Full-stack developer</p>
+        <h1>I build practical web products with reliable AI integrations.</h1>
+        <p className="intro">
+          I work across React, TypeScript, Node.js, APIs, testing, and deployment—turning
+          learning projects into clear, documented, production-minded software.
+        </p>
+        <div className="actions">
+          <a className="primaryAction" href="#work">Explore my work</a>
+          <a className="secondaryAction" href="https://github.com/merak-max" target="_blank" rel="noreferrer">
+            View GitHub <span aria-hidden="true">↗</span>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+        <div className="signalRow" aria-label="Current focus">
+          <span>Currently focused on</span>
+          <strong>TypeScript · backend systems · trustworthy AI UX</strong>
+        </div>
+      </section>
+
+      <section id="work" className="section shell">
+        <div className="sectionHeading">
+          <p className="eyebrow">Selected work</p>
+          <h2>Projects that show the engineering, not just the interface.</h2>
+        </div>
+        <div className="projectGrid">
+          {projects.map((project, index) => (
+            <article className="project" key={project.title}>
+              <div className="projectIndex">0{index + 1}</div>
+              <p className="projectLabel">{project.label}</p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <ul className="tags" aria-label={project.title + " technologies"}>
+                {project.stack.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+              <div className="projectLinks">
+                <a href={project.demo} target="_blank" rel="noreferrer">Live demo ↗</a>
+                <a href={project.repo} target="_blank" rel="noreferrer">Source ↗</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section id="skills" className="section shell split">
+        <div className="sectionHeading">
+          <p className="eyebrow">Technical toolkit</p>
+          <h2>A focused JavaScript and TypeScript stack.</h2>
+          <p className="sectionCopy">
+            I care about useful interfaces, explicit system boundaries, safe configuration,
+            automated verification, and documentation another developer can follow.
+          </p>
+        </div>
+        <dl className="skillList">
+          {skills.map(([name, detail]) => (
+            <div key={name}>
+              <dt>{name}</dt>
+              <dd>{detail}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="section shell">
+        <div className="principles">
+          <p className="eyebrow">How I work</p>
+          <div className="principleGrid">
+            <div><strong>Build honestly</strong><span>Claims should match running code.</span></div>
+            <div><strong>Test risky paths</strong><span>Failures and edge cases deserve coverage.</span></div>
+            <div><strong>Document decisions</strong><span>Good software should be understandable.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="footer shell">
+        <div>
+          <p className="eyebrow">Let&apos;s build something useful</p>
+          <h2>Open to learning, collaboration, and software opportunities.</h2>
+        </div>
+        <a className="primaryAction" href="https://github.com/merak-max" target="_blank" rel="noreferrer">
+          Connect on GitHub ↗
         </a>
       </footer>
-    </div>
+    </main>
   );
 }
