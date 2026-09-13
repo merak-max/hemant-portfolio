@@ -1,0 +1,21 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: corepack pnpm install --frozen-lockfile
+      - run: corepack pnpm check
