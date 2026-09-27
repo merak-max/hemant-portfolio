@@ -5,14 +5,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://hemant-portfolio-hazel.vercel.app"),
   title: "Hemant Kumar Singh — Full-stack Developer",
   description:
-    "Portfolio of Hemant Kumar Singh, building AI-powered web applications with React, TypeScript, Node.js, and Express.",
+    "Hemant Kumar Singh builds developer tools and backend systems with TypeScript, Node.js, Go, and React. Explore HookLens and measured auction-engine results.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Hemant Kumar Singh — Full-stack Developer",
     description:
-      "Practical full-stack web products with reliable AI integrations.",
+      "Developer tools, reliable APIs, and reproducible backend measurements.",
     url: "/",
     siteName: "Hemant Kumar Singh",
     type: "website",

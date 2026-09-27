@@ -6,9 +6,9 @@ The source for Hemant's project-focused developer portfolio.
 
 ## Featured work
 
-- Advance Online Chatbot
+- HookLens — webhook inspection, schema-drift detection, and a synthetic browser sandbox
+- Auction Engine — Go/PostgreSQL auctions with published local latency measurements
 - Blue Carbon Registry
-- Mini AlgoChat
 
 ## Stack
 
